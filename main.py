@@ -5,7 +5,7 @@ def main(name):
     rt=[]
     ch=""
     for line in f:
-        tokens=line.replace("\t","").replace("\n","").split()
+        tokens=line.replace("\t","").replace("    ","").replace("\n","").split()
         if tokens[0]=="chunk":
             ch=tokens[1]
         elif tokens[0]==":":
@@ -17,6 +17,9 @@ def main(name):
                 print(vs[tokens[1]])
             elif tokens[0]=="equ":
                 if vs[tokens[1]]==vs[tokens[2]]:rt.insert(0,"True")
+                else:rt.insert(0,"False")
+            elif tokens[0]=="not":
+                if not vs[tokens[1]]==vs[tokens[2]]:rt.insert(0,"True")
                 else:rt.insert(0,"False")
             elif tokens[0]=="srt":
                 vs.update({tokens[1]:rt[int(tokens[2])-1]})
