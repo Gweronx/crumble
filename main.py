@@ -63,17 +63,17 @@ def main(name):
                     else:rt.insert(0,"False")
                 elif tokens[0]=="not":
                     if not vs[tokens[1]]==vs[tokens[2]]:rt.insert(0,"True")
-                        else:rt.insert(0,"False")
-                    elif tokens[0]=="srt":
-                        vs.update({tokens[1]:rt[int(tokens[2])-1]})
-                    elif tokens[0]=="add":
-                        rt.insert(0,int(int(vs[tokens[1]])+int(vs[tokens[2]])))
-                    elif tokens[0]=="sub":
-                        rt.insert(0,int(int(vs[tokens[1]])-int(vs[tokens[2]])))
-                    elif tokens[0]=="mul":
-                        rt.insert(0,int(int(vs[tokens[1]])*int(vs[tokens[2]])))
-                    elif tokens[0]=="div":
-                        rt.insert(0,int(int(vs[tokens[1]])/int(vs[tokens[2]])))
+                    else:rt.insert(0,"False")
+                elif tokens[0]=="srt":
+                    vs.update({tokens[1]:rt[int(tokens[2])-1]})
+                elif tokens[0]=="add":
+                    rt.insert(0,int(int(vs[tokens[1]])+int(vs[tokens[2]])))
+                elif tokens[0]=="sub":
+                    rt.insert(0,int(int(vs[tokens[1]])-int(vs[tokens[2]])))
+                elif tokens[0]=="mul":
+                    rt.insert(0,int(int(vs[tokens[1]])*int(vs[tokens[2]])))
+                elif tokens[0]=="div":
+                    rt.insert(0,int(int(vs[tokens[1]])/int(vs[tokens[2]])))
         elif ch=="reserve":
             if not tokens[0]=="chunk":
                 re.insert(line)
