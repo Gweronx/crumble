@@ -32,9 +32,10 @@ def main(name):
                 rt.insert(0,int(int(vs[tokens[1]])*int(vs[tokens[2]])))
             elif tokens[0]=="div":
                 rt.insert(0,int(int(vs[tokens[1]])/int(vs[tokens[2]])))
+            # Num 1
             elif tokens[0]=="crt":
                 if vs[tokens[1]]=='True':
-                    tokens=rv[tokens[2]].replace("\t","").replace("    ","").replace("\n","").split()
+                    tokens=re[int(tokens[2])-1].replace("\t","").replace("    ","").replace("\n","").split()
                     if tokens[0]=="out":
                         print(vs[tokens[1]])
                     elif tokens[0]=="equ":
@@ -54,8 +55,9 @@ def main(name):
                     elif tokens[0]=="div":
                         rt.insert(0,int(int(vs[tokens[1]])/int(vs[tokens[2]])))
                 else:pass
+            # Num 2
             elif tokens[0]=="cfr":
-                tokens=rv[tokens[1]].replace("\t","").replace("    ","").replace("\n","").split()
+                tokens=re[int(tokens[1])-1].replace("\t","").replace("    ","").replace("\n","").split()
                 if tokens[0]=="out":
                     print(vs[tokens[1]])
                 elif tokens[0]=="equ":
@@ -76,6 +78,6 @@ def main(name):
                     rt.insert(0,int(int(vs[tokens[1]])/int(vs[tokens[2]])))
         elif ch=="reserve":
             if not tokens[0]=="chunk":
-                re.insert(line)
+                re.insert(0,line)
             else:pass
 main(argv[1])
