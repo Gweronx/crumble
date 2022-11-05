@@ -32,6 +32,8 @@ def main(name):
                 rt.insert(0,int(int(vs[tokens[1]])*int(vs[tokens[2]])))
             elif tokens[0]=="div":
                 rt.insert(0,int(int(vs[tokens[1]])/int(vs[tokens[2]])))
+            elif tokens[0]=="pfi":
+                rt.insert(0,input(tokens[1].replace("//"," ").replace('"',''))
             # Num 1
             elif tokens[0]=="crt":
                 if vs[tokens[1]]=='True':
@@ -54,6 +56,8 @@ def main(name):
                         rt.insert(0,int(int(vs[tokens[1]])*int(vs[tokens[2]])))
                     elif tokens[0]=="div":
                         rt.insert(0,int(int(vs[tokens[1]])/int(vs[tokens[2]])))
+                    elif tokens[0]=="pfi":
+                        rt.insert(0,input(tokens[1].replace("//"," ").replace('"',''))
                 else:pass
             # Num 2
             elif tokens[0]=="cfr":
@@ -76,6 +80,8 @@ def main(name):
                     rt.insert(0,int(int(vs[tokens[1]])*int(vs[tokens[2]])))
                 elif tokens[0]=="div":
                     rt.insert(0,int(int(vs[tokens[1]])/int(vs[tokens[2]])))
+                elif tokens[0]=="pfi":
+                    rt.insert(0,input(tokens[1].replace("//"," ").replace('"',''))
         elif ch=="reserve":
             if not tokens[0]=="chunk":
                 re.insert(0,line)
