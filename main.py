@@ -62,7 +62,7 @@ def main(name):
                     elif tokens[0]=="pfi":
                         rt.insert(0,input(tokens[1].replace("//"," ").replace('"','')))
                     elif tokens[0]=="run":
-                        main(tokens[1])
+                        main(tokens[1]+".cr")
                 # The end of CRT
                 else:pass
         elif ch=="reserve":
