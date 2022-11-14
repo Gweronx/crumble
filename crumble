@@ -4,7 +4,7 @@ def error(line,number,filename):
     print(f"Command-Error on line {str(number)} in <{filename}>:\n  {line}\nWhat do you mean by \"{line.split()[0]}\"?")
 def main(name):
     f=open(name)
-    vs={"name":f.name,}
+    vs={"name":f.name}
     rt=[]
     re=[]
     ln=1
@@ -150,4 +150,4 @@ def main(name):
     except IndexError as e:
         print(f"List-Error on line {str(ln)} in <{f.name}>:\n  {line}\n{line.split()[2]} is out of the return/reserve lists range.")
     else:print(f"<{f.name}> executed succesfully.")
-main(argv[0])
+main(argv[1])
