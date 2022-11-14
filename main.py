@@ -142,6 +142,7 @@ def repl():
         print(f"Variable-Error:\n  {txt}\n{e} is not a variable.")
     except IndexError as e:
         print(f"List-Error:\n  {txt}\n{txt.split()[2]} is out of the return/reserve lists range.")
+    repl()
 def error(line,number,filename):
     print(f"Command-Error on line {str(number)} in <{filename}>:\n  {line}\nWhat do you mean by \"{line.split()[0]}\"?")
 def main(name):
