@@ -150,5 +150,4 @@ def main(name):
     except IndexError as e:
         print(f"List-Error on line {str(ln)} in <{f.name}>:\n  {line}\n{line.split()[2]} is out of the return/reserve lists range.")
     else:print(f"<{f.name}> executed succesfully.")
-    repl()
 main(argv[0])
