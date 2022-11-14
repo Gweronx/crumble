@@ -4,5 +4,5 @@ mkdir CRUMBLE
 cd CRUMBLE  
 gh repo clone Gweronx/crumble
 cd crumble
-chmod +x crumble.py
+chmod +x crumble
 echo 'export PATH="$HOME/CRUMBLE/crumble:$PATH"' >> ~/.bashrc
