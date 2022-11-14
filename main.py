@@ -5,10 +5,11 @@ def repl():
     re=[]
     ch=""
     mlc=0
-    try:
+    while True:
+        try:
             txt=input(": ").replace("\t","").replace("    ","").replace("\n","")
             tokens=txt.split()
-            if len(tokens)==0: pass
+            if len(tokens)==0:pass
             elif txt.startswith("(*"):
                 mlc=1
             elif txt.endswith("*)"):
@@ -138,11 +139,10 @@ def repl():
                 pass
             else:
                 print(f"Command-Error:\n  {txt}\nWhat do you mean by \"{txt.split()[0]}\"?")
-    except KeyError as e:
-        print(f"Variable-Error:\n  {txt}\n{e} is not a variable.")
-    except IndexError as e:
-        print(f"List-Error:\n  {txt}\n{txt.split()[2]} is out of the return/reserve lists range.")
-    repl()
+        except KeyError as e:
+            print(f"Variable-Error:\n  {txt}\n{e} is not a variable.")
+        except IndexError as e:
+            print(f"List-Error:\n  {txt}\n{txt.split()[2]} is out of the return/reserve lists range.")
 def error(line,number,filename):
     print(f"Command-Error on line {str(number)} in <{filename}>:\n  {line}\nWhat do you mean by \"{line.split()[0]}\"?")
 def main(name):
