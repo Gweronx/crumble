@@ -1,6 +1,6 @@
 from sys import argv
 def repl():
-    vs={name:f.name,}
+    vs={}
     rt=[]
     re=[]
     ch=""
@@ -146,7 +146,7 @@ def error(line,number,filename):
     print(f"Command-Error on line {str(number)} in <{filename}>:\n  {line}\nWhat do you mean by \"{line.split()[0]}\"?")
 def main(name):
     f=open(name)
-    vs={name:f.name,}
+    vs={"name":f.name,}
     rt=[]
     re=[]
     ln=1
