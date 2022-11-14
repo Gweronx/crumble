@@ -4,6 +4,6 @@ mkdir CRUMBLE
 cd CRUMBLE  
 gh repo clone Gweronx/crumble
 cd crumble
-echo "python3 main.py $1" >> crumble
+echo "python3 $HOME/CRUMBLE/crumble/main.py $1" >> crumble
 chmod +x crumble
 echo 'export PATH="$HOME/CRUMBLE/crumble:$PATH"' >> ~/.bashrc
