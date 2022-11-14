@@ -294,7 +294,7 @@ def main(name):
         print(f"List-Error on line {str(ln)} in <{f.name}>:\n  {line}\n{line.split()[2]} is out of the return/reserve lists range.")
     else:print(f"<{f.name}> executed succesfully.")
     repl()
-if not argv[0]=="repl":
-    main(argv[0])
+if not argv[1]=="repl":
+    main(argv[1])
 else:
     repl()
